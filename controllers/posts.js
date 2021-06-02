@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 export const getPosts = async (req, res) => {
     const { page } = req.query;
     try {
-        const LIMIT = 8;
+        const LIMIT = 6;
         const startIndex = (Number(page) - 1) * LIMIT // get the starting ind of every page
         const total = await PostMessage.countDocuments({})
 
